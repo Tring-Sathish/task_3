@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  float: left;
+  width: 56%;
+  height: auto;
+  background: #ccc;
+  padding: 20px;
+}
+
+article {
+  float: right;
+  padding: 20px;
+  width: 43.5%;
+  background: #f1f1f1;
+  height: auto;
+  display: none;
+}
+
+button {
+  border: none;
+  font-size: large;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+table button {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+td {
+  padding: 5px;
+}
+
+th {
+  background-color: #ccc;
+}
+
+input,
+.inputbtn {
+  padding: 11px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.inputbtn {
+  font-size: larger;
+  display: inline-block;
+}
+
+.inputbtn_del {
+  display: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit,
+#cancel {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#submit:hover,
+#cancel:hover,
+.pagenumbers button:hover, #next_btn:hover, #prev_btn:hover {
+  background-color: #45a049;
+}
+
+ .page, .pagenumbers {
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pagenumbers button, #prev_btn, #next_btn {
+  cursor: pointer;
+  background-color: #04aa6d;
+  color: white;
+  border-radius: 20%;
+  margin: 10px 10px;
+  transition: 0.4s;
+}
+
+.pagenumbers button.active {
+  background-color: #44eeaa;
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1012px) {
+   nav {
+    width:  57%;
+    height: auto;
+  }
+
+  article {
+    width:  42%;
+  }
+
+  .name, .age, .mark {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 1011px) and (min-width: 584px) {
+  nav, article {
+   width:  100%;
+   height: auto;
+   display: block;
+ }
+
+ .name, .age, .mark {
+   width: 27%;
+ }
+}
+
+
+@media screen and (max-width: 583px) and (min-width: 319px) {
+
+   article, nav {
+    width: 100%;
+    margin: 3px;
+    height: auto;
+    margin-bottom: 5%;
+  }
+
+  .name, .age, .mark {
+    width: 68%;
+  }
+
+  #cancel,#submit {
+    width: 25%;
+    font-size: small;
+    text-align: center;
+  }
+
+  .inputbtn {
+    width: 5%;
+    padding: 1%;
+    text-align: left;
+  }
+
+}
+
+@media screen and (max-width: 319px) {
+
+  article, nav, .name, .age, .mark {
+   width: 100%;
+   margin: 3px;
+   height: auto;
+   margin-bottom: 5%;
+   display: block;
+ }
+
+
+ #cancel,#submit {
+  display: inline-block;
+   width: 25%;
+   font-size: small;
+   text-align: center;
+ }
+
+ .inputbtn {
+   width: 5%;
+   padding: 1%;
+   text-align: left;
+ }
+
+}
+
